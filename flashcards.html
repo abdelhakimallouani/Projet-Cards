@@ -1,11 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
-<body>
-    
+
+<body class="bg-gray-200">
+
+        <header
+        class="bg-[#263973] w-full md:w-[92%] h-auto md:min-h-[150px] mx-4 md:mx-[50px] my-8 md:my-[50px] p-4 md:p-8 rounded-[2vw]">
+        <nav class="flex flex-col md:flex-row justify-between items-center pb-4 border-b-2 border-gray-300 gap-4 md:gap-0">
+            <div class="mb-4 md:mb-0">
+                <h2 class="text-white text-xl md:text-2xl font-bold">CARDS</h2>
+            </div>
+            <div>
+                <ul class="flex items-center gap-8 md:gap-20 text-white font-bold md:text-base">
+                    <li><a href="index.html" class="hover:text-blue-200 transition-colors">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-200 transition-colors">Service</a></li>
+                    <li><a href="#" class="hover:text-blue-200 transition-colors">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 mt-6 md:mt-8">
+            <div class="md:col-span-2 flex flex-col justify-center ">
+                <p class="text-white  text-lg md:text-[25px]  mb-6 md:mb-20">
+                    Cards est une application web interactive qui aide les utilisateurs à apprendre grâce à des
+                    flashcards (cartes de révision) et des quiz.
+                </p>
+                <div class="flex gap-8 ">
+                <a href="#Create-coll">
+                    <button
+                        class="bg-amber-50 text-[#263973] text-base md:text-[20px] py-2 md:py-3 px-4 md:px-7 rounded-xl cursor-pointer hover:scale-105 transition-transform duration-200 font-serif w-full md:w-auto text-center">
+                       Nouvelle Collection
+                    </button>
+                </a>
+                <a href="#Create-cat">
+                    <button
+                        class="bg-amber-50 text-[#263973] text-base md:text-[20px] py-2 md:py-3 px-4 md:px-7 rounded-xl cursor-pointer hover:scale-105 transition-transform duration-200 font-serif w-full md:w-auto text-center">
+                       Nouvelle Collection
+                    </button>
+                </a>
+                <a href="#affiche-coll">
+                    <button
+                        class="bg-amber-50 text-[#263973] text-base md:text-[20px] py-2 md:py-3 px-4 md:px-7 rounded-xl cursor-pointer hover:scale-105 transition-transform duration-200 font-serif w-full md:w-auto text-center">
+                       Nouvelle Collection
+                    </button>
+                </a>
+                </div>
+            </div>
+            <div class="flex justify-center md:justify-end order-first md:order-last">
+                <img class="max-w-full h-auto w-48 md:w-64 lg:w-80"
+                    src="img/5e59c43bce967816d5ef4a53eaad2192-removebg-preview.png" alt="Illustration de flashcards">
+            </div>
+        </div>
+    </header>
+
+    <section class="max-w-4xl mx-auto ">
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Créer Une Collection</h1>
+            <p class="text-gray-600">Organisez vos connaissances avec des cartes d'apprentissage</p>
+        </div>
+
+        <div  class="grid grid-cols-1  gap-8">
+            <!-- Create Collection -->
+            <div id="Create-coll" class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-all duration-300">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-folder-plus text-blue-500 mr-3"></i>
+                    Nouvelle Collection
+                </h2>
+
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Le Titre De La Collection</label>
+                    <input type="text"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200"
+                        placeholder="Ex: HTML">
+                </div>
+
+                <div class="border-t border-gray-200 my-6"></div>
+
+                <button
+                    class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center">
+                    <i class="fas fa-plus mr-2"></i>
+                    Ajouter La Collection
+                </button>
+            </div>
+
+            <!-- Create Card -->
+            <div id="Create-cat" class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-all duration-300">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-sticky-note text-green-500 mr-3"></i>
+                    Créer Une Carte
+                </h2>
+
+                <!-- Collection Selection -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Choix Votre La Collection</label>
+                    <div class="relative">
+                        <select
+                            class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 appearance-none bg-white pr-10">
+                            <option>Mes collections</option>
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-700">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Question</label>
+                    <textarea
+                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 h-32 resize-none transition-all duration-200"
+                        placeholder="Posez votre question ici..."></textarea>
+                </div>
+
+                <!-- Answer -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Réponse</label>
+                    <textarea
+                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 h-32 resize-none transition-all duration-200"
+                        placeholder="La réponse à votre question..."></textarea>
+                </div>
+
+                <!-- Add Card Button -->
+                <button
+                    class="w-full bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center">
+                    <i class="fas fa-save mr-2"></i>
+                    Ajouter La Carte
+                </button>
+            </div>
+        </div>
+
+        <!-- Recent Collections -->
+        <div id="affiche-coll" class="mt-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Collections Récentes</h2>
+            <div class="grid grid-cols-1 ">
+                <div
+                    class="bg-white rounded-xl shadow-md border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-book text-blue-500"></i>
+                        </div>
+                        <h3 class="font-semibold text-gray-800">Vocabulaire Français</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">24 cartes</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="bg-[#263973] text-gray-300 py-5 mt-12">
+        <div class="w-full md:w-[92%] mx-auto ">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-2xl font-bold">CARDS</h2>
+                    <p class=" mt-2">Apprenez plus efficacement</p>
+                </div>
+                <div>
+                    <p>abdelhakimallouani@gmail.com </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class=" hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class=" hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class=" hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
