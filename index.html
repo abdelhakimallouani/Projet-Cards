@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body class="bg-gray-200">
+    <header
+        class="bg-[#263973] w-full md:w-[92%] h-auto md:min-h-[150px] mx-4 md:mx-[50px] my-8 md:my-[50px] p-4 md:p-8 rounded-[2vw]">
+        <nav
+            class="flex flex-col md:flex-row justify-between items-center pb-4 border-b-2 border-gray-300 gap-4 md:gap-0">
+            <div class="mb-4 md:mb-0">
+                <h2 class="text-white text-xl md:text-2xl font-bold">CARDS</h2>
+            </div>
+            <div>
+                <ul class="flex items-center gap-8 md:gap-20 text-white text-sm md:text-base">
+                    <li><a href="index.html" class="hover:text-blue-200 transition-colors">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-200 transition-colors">Service</a></li>
+                    <li><a href="#" class="hover:text-blue-200 transition-colors">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 mt-6 md:mt-8">
+            <div class="md:col-span-2 flex flex-col justify-center ">
+                <p class="text-white  text-lg md:text-[25px]  mb-6 md:mb-20">
+                    Cards est une application web interactive qui aide les utilisateurs à apprendre grâce à des
+                    flashcards (cartes de révision) et des quiz.
+                </p>
+                <a href="#hakim">
+                    <button
+                        class="bg-amber-50 text-[#263973] text-base md:text-[20px] py-2 md:py-3 px-4 md:px-7 rounded-xl cursor-pointer hover:scale-105 transition-transform duration-200 font-serif w-full md:w-auto text-center">
+                        Commencez maintenant →
+                    </button>
+                </a>
+            </div>
+            <div class="flex justify-center md:justify-end order-first md:order-last">
+                <img class="max-w-full h-auto w-48 md:w-64 lg:w-80"
+                    src="img/5e59c43bce967816d5ef4a53eaad2192-removebg-preview.png" alt="Illustration de flashcards">
+            </div>
+        </div>
+    </header>
+
+    <section id="hakim">
+        <div class="text-center p-5 mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Cards</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                Apprenez efficacement grâce à des flashcards interactives et des quiz personnalisés. Créez vos
+                collections, révisez à votre rythme et testez vos connaissances.
+            </p>
+        </div>
+        <div class="flex flex-col md:flex-row justify-around items-center gap-2 p-4 md:p-8 m-4 md:m-[50px] ">
+            <!-- Flashcards -->
+            <a href="flashcards.html"
+                class="bg-white w-full md:w-[35%]  rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                <div>
+                    <div class=" flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-layer-group text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Flashcards</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Créez et organisez vos collections de flashcards. Révisez en retournant les cartes pour
+                        mémoriser
+                        efficacement questions et réponses.
+                    </p>
+                </div>
+            </a>
+
+            <!-- Quiz -->
+            <a href="quiz.html"
+                class="bg-white w-full md:w-[35%] rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                <div>
+
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                            <i class="fas fa-question-circle text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Quiz</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Testez vos connaissances avec des quiz variés. Répondez aux questions et suivez votre
+                        progression
+                        pour améliorer votre apprentissage.
+                    </p>
+
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <section class=" w-full md:w-[92%] mx-auto my-12 p-8">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12">Pourquoi choisir Cards ?</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+                class="text-center bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-brain text-purple-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Mémoire à long terme</h3>
+                <p class="text-gray-600">Notre système de répétition espacée optimise votre mémorisation.</p>
+            </div>
+
+            <div
+                class="text-center bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                <div class="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-chart-line text-yellow-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Suivi de progression</h3>
+                <p class="text-gray-600">Visualisez vos améliorations avec des statistiques détaillées.</p>
+            </div>
+
+            <div
+                class="text-center bg-white rounded-2xl shadow-lg p-6 border border-gray-100 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-mobile-alt text-red-600 text-xl"></i>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Accessible partout</h3>
+                <p class="text-gray-600">Utilisez Cards sur tous vos appareils, où que vous soyez.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#263973] text-gray-300 py-5 mt-12">
+        <div class="w-full md:w-[92%] mx-auto ">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-2xl font-bold">CARDS</h2>
+                    <p class=" mt-2">Apprenez plus efficacement</p>
+                </div>
+                <div>
+                    <p>abdelhakimallouani@gmail.com </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class=" hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class=" hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class=" hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    
+</body>
+
+</html>
