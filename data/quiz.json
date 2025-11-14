@@ -1,0 +1,106 @@
+[
+    {
+        "id": "q1",
+        "collectionId": "html-basics",
+        "title": "Quiz HTML - Niveau 1",
+        "questions": [
+            {
+                "id": "q1-1",
+                "type": "text",
+                "question": "Que signifie HTML ?",
+                "acceptedAnswers": ["Hyper Text Markup Language", "Hypertext Markup Language"]
+            },
+            {
+                "id": "q1-2",
+                "type": "true_false",
+                "question": "La balise div est sémantique.",
+                "correct": false
+            },
+            {
+                "id": "q1-3",
+                "type": "multiple_choice",
+                "question": "Quelle balise est utilisée pour créer un lien ?",
+                "options": ["<link>", "<a>", "<href>", "<url>"],
+                "correct": 1
+            },
+            {
+                "id": "q1-4",
+                "type": "text",
+                "question": "Quelle balise est utilisée pour créer un paragraphe ?",
+                "acceptedAnswers": ["<p>", "p"]
+            }
+        ]
+    },
+    {
+        "id": "q2",
+        "collectionId": "css-basics",
+        "title": "Quiz CSS - Niveau 1",
+        "questions": [
+            {
+                "id": "q2-1",
+                "type": "text",
+                "question": "Que signifie CSS ?",
+                "acceptedAnswers": ["Cascading Style Sheets", "Cascading Style Sheet"]
+            },
+            {
+                "id": "q2-2",
+                "type": "true_false",
+                "question": "CSS est utilisé pour styliser les pages web.",
+                "correct": true
+            },
+            {
+                "id": "q2-3",
+                "type": "multiple_choice",
+                "question": "Quelle propriété CSS est utilisée pour changer la couleur du texte ?",
+                "options": ["text-color", "font-color", "color", "text-style"],
+                "correct": 2
+            },
+            {
+                "id": "q2-4",
+                "type": "multiple_choice",
+                "question": "Quelle unité est relative à la taille de police de l'élément parent ?",
+                "options": ["px", "em", "rem", "vw"],
+                "correct": 1
+            },
+            {
+                "id": "q2-5",
+                "type": "text",
+                "question": "Quelle propriété CSS est utilisée pour ajouter un espace entre les bordures et le contenu d'un élément ?",
+                "acceptedAnswers": ["padding", "margin", "spacing", "border-spacing"]
+            }
+        ]
+    },
+    {
+        "id": "q3",
+        "collectionId": "js-basics",
+        "title": "Quiz JavaScript - Niveau 1",
+        "questions": [
+            {
+                "id": "q3-1",
+                "type": "text",
+                "question": "Que signifie JS ?",
+                "acceptedAnswers": ["JavaScript"]
+            },
+            {
+                "id": "q3-2",
+                "type": "true_false",
+                "question": "JavaScript est un langage de programmation côté client uniquement.",
+                "correct": false
+            },
+            {
+                "id": "q3-3",
+                "type": "multiple_choice",
+                "question": "Quelle méthode permet de sélectionner un élément par son ID ?",
+                "options": ["querySelector()", "getElementById()", "getElementsByClassName()", "querySelectorAll()"],
+                "correct": 1
+            },
+            {
+                "id": "q3-4",
+                "type": "multiple_choice",
+                "question": "Quel mot-clé permet de déclarer une variable en JavaScript ?",
+                "options": ["var", "let", "const", "Toutes ces réponses"],
+                "correct": 3
+            }
+        ]
+    }
+]

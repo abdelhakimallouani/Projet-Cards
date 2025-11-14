@@ -1,14 +1,147 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flashcards Dynamiques</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
 </head>
 
-<body class="bg-gray-100 ">
-    
+<body class="bg-gray-200">
+    <header
+        class="bg-gradient-to-b from-[#263973] to-[#486CD9] w-full md:w-[92%] h-auto md:min-h-[150px] mx-4 md:mx-[50px] my-8 md:my-[50px] p-4 md:p-8 rounded-[2vw]">
+        <nav
+            class="flex flex-col md:flex-row justify-between items-center pb-4 border-b-2 border-gray-300 gap-4 md:gap-0">
+            <div class="mb-4 md:mb-0">
+                <h2 class="text-white text-xl md:text-2xl font-bold">CARDS</h2>
+            </div>
+            <div>
+                <ul class="flex items-center gap-8 md:gap-20 text-white font-bold md:text-base">
+                    <li><a href="index.html" class="hover:text-blue-200 transition-colors">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-200 transition-colors">Service</a></li>
+                    <li><a href="#" class="hover:text-blue-200 transition-colors">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 mt-6 md:mt-8">
+            <div class="md:col-span-2 flex flex-col justify-center ">
+                <p class="text-white  text-lg md:text-[25px]  mb-6 md:mb-20">
+                    Cards est une application web interactive qui aide les utilisateurs à apprendre grâce à des
+                    flashcards (cartes de revision) et des quiz.
+                </p>
+                <a href="#hakim">
+                    <button
+                        class="bg-amber-50 text-[#263973] text-base md:text-[20px] py-2 md:py-3 px-4 md:px-7 rounded-xl cursor-pointer hover:scale-105 transition-transform duration-200 font-serif w-full md:w-auto text-center">
+                        Commencez vers les quiz →
+                    </button>
+                </a>
+            </div>
+            <div class="flex justify-center md:justify-end order-first md:order-last">
+                <img class="max-w-full h-auto w-50 md:w-64 lg:w-120"
+                    src="img/5e59c43bce967816d5ef4a53eaad2192-removebg-preview.png" alt="Illustration de flashcards">
+            </div>
+        </div>
+    </header>
+
+    <section id="hakim">
+        <section id="quiz-section" class="w-full md:w-[92%] mx-auto px-4 md:px-0 mb-12">
+            <div class="container max-w-4xl mx-auto">
+                <div id="quiz-selection" class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                    <h2 class="text-2xl font-bold text-[#263973] mb-6 text-center">Choisissez un quiz</h2>
+                    <div id="quiz-list" class="space-y-6">
+                    </div>
+                </div>
+
+                <!-- Quiz  -->
+                <div id="quiz-screen" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 hidden">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 id="quiz-title" class="text-xl md:text-2xl font-semibold text-[#263973]">Quiz HTML - Niveau
+                            1</h2>
+                        <div id="progress"
+                            class="text-sm md:text-base text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
+                            Question <span id="current-question">1</span>/<span id="total-questions">4</span>
+                        </div>
+                    </div>
+
+                    <div id="question-container" class="mb-6 p-4 bg-gray-50 rounded-lg">
+                        <!-- Question  -->
+                    </div>
+
+                    <div id="feedback" class="mb-4 hidden p-4 rounded-lg">
+                        <!-- Feedback  -->
+                    </div>
+
+                    <div class="flex justify-between mt-8">
+                        <button id="prev-btn"
+                            class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg hidden transition-colors">
+                            </i>Precedent
+                        </button>
+                        <button id="next-btn"
+                            class="bg-[#486CD9] hover:bg-[#263973] text-white font-bold py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors ml-auto">
+                            Suivant
+                        </button>
+                    </div>
+                </div>
+
+                <div id="results-screen" class="bg-white rounded-2xl shadow-lg p-6 md:p-8 hidden">
+                    <h2 class="text-2xl font-bold text-[#263973] mb-6 text-center">Resultats du Quiz</h2>
+                    <div class="text-center mb-8">
+                        <div
+                            class="inline-block bg-gradient-to-br from-[#263973] to-[#486CD9] p-8 rounded-2xl shadow-lg">
+                            <div class="text-4xl md:text-5xl font-bold text-white mb-2">
+                                <span id="score">0</span>/<span id="max-score">0</span>
+                            </div>
+                            <p class="text-gray-200">Votre score</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="font-semibold text-xl text-[#263973] mb-4 text-center">Meilleurs scores</h3>
+                        <div id="best-scores" class="space-y-3 max-w-md mx-auto">
+                            <!-- Best scores will be displayed here -->
+                        </div>
+                    </div>
+
+            
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+
+    <footer class="bg-[#263973] text-gray-300 py-5 mt-12">
+        <div class="w-full md:w-[92%] mx-auto ">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h2 class="text-2xl font-bold">CARDS</h2>
+                    <p class=" mt-2">Apprenez plus efficacement</p>
+                </div>
+                <div>
+                    <p>abdelhakimallouani@gmail.com </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class=" hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class=" hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class=" hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="main-js/quiz.js"></script>
 
 </body>
+
 </html>
